@@ -33,9 +33,21 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/hitung-luas-segitiga/{alas?}/{tinggi?}', function ($alas = 1, $tinggi = 1) {
-    $luas = $alas * $tinggi / 2;
-    return 'Alas nya : ' . $alas . '<br>'
-    . 'Tingginya : ' . $tinggi . '<br>'
-    . 'Hasil luas segitiga : ' .$luas;
-});
+// Route::get('/hitung-luas-segitiga/{alas?}/{tinggi?}', function ($alas = 1, $tinggi = 1) {
+//     $luas = $alas * $tinggi / 2;
+//     return 'Alas nya : ' . $alas . '<br>'
+//     . 'Tingginya : ' . $tinggi . '<br>'
+//     . 'Hasil luas segitiga : ' .$luas;
+// });
+
+// route group
+route::group(['prefix' => 'jurusan'], function(){
+    route::get('/kelas/{kelas}', function($kelas){
+        return 'Kelas : ' .$kelas;
+    }  ) ;
+
+    route::get('/wali-kelas/{nama}', function($nama){
+        return 'Nama Wali Kelas : ' .$nama;
+    }  ) ;
+} ) ;
+
