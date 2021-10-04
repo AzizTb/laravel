@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DataSiswaController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 // Route::get('1', function () {
 //     return 'satu';
@@ -41,13 +43,18 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // route group
-route::group(['prefix' => 'jurusan'], function(){
-    route::get('/kelas/{kelas}', function($kelas){
-        return 'Kelas : ' .$kelas;
-    }  ) ;
+// route::group(['prefix' => 'jurusan'], function(){
+//     route::get('/kelas/{kelas}', function($kelas){
+//         return 'Kelas : ' .$kelas;
+//     }  ) ;
 
-    route::get('/wali-kelas/{nama}', function($nama){
-        return 'Nama Wali Kelas : ' .$nama;
-    }  ) ;
-} ) ;
+//     route::get('/wali-kelas/{nama}', function($nama){
+//         return 'Nama Wali Kelas : ' .$nama;
+//     }  ) ;
+// } ) ;
 
+Route::get('data-siswa', [DataSiswaController::class, 'datasiswa' ]);
+Route::get('data-siswi', [DataSiswaController::class, 'datasiswi' ]);
+Route::get('nama/{nama?}', [DataSiswaController::class, 'nama' ]);
+
+Route::resource('user', UserController::class);
