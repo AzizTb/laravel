@@ -53,8 +53,13 @@ use App\Http\Controllers\UserController;
 //     }  ) ;
 // } ) ;
 
-Route::get('data-siswa', [DataSiswaController::class, 'datasiswa' ]);
-Route::get('data-siswi', [DataSiswaController::class, 'datasiswi' ]);
-Route::get('nama/{nama?}', [DataSiswaController::class, 'nama' ]);
+// Route::get('data-siswa', [DataSiswaController::class, 'datasiswa' ]);
+// Route::get('data-siswi', [DataSiswaController::class, 'datasiswi' ]);
+// Route::get('nama/{nama?}', [DataSiswaController::class, 'nama' ]);
 
-Route::resource('user', UserController::class);
+// Route::resource('user', UserController::class);
+
+
+Route::get('profile/{nama}', function($nama) {
+    return view('profile.index', ['nama_user' => $nama]);
+});
