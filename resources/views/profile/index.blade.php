@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
 
     @php
         $satu = 1;
@@ -18,7 +12,7 @@
         $status = 2;
     @endphp
 
-    <h1> Yahalo {{ $nama_user }} </h1>
+    <h1> Yahalo </h1>
 {{--
     <p> Baris ke {{ $satu }} </p>
     <p> Baris ke {{ $dua }} </p>
@@ -36,5 +30,6 @@
         <br>
     @endfor
 
-</body>
-</html>
+    <a class="btn btn-primary btn-lg" href="{{ route ('index') }}">Index</a>
+
+@endsection
