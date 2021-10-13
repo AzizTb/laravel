@@ -30,6 +30,6 @@
         <br>
     @endfor
 
-    <a class="btn btn-primary btn-lg" href="{{ route ('index') }}">Index</a>
+    <a class="btn btn-primary btn-lg" href="{{ route ('album') }}">Album</a>
 
 @endsection

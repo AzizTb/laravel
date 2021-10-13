@@ -59,10 +59,15 @@ use App\Http\Controllers\UserController;
 
 // Route::resource('user', UserController::class);
 
-Route::get('album', function () {
-    return view('profile.album');
-}) -> name('album');
+// Route::get('album', function () {
+//     return view('profile.album');
+// }) -> name('album');
 
-Route::get('asdfgoiufbhcfvuchgnxxhnocuvonufgyvbfjd', function () {
-    return view('profile.index');
-}) -> name('index');
+// Route::get('index', function () {
+//     return view('profile.index');
+// }) -> name('index');
+
+Route::resource('user', UserController::class);
+
+// show
+// Route::resource('user/{$id}', UserController::class, 'show');

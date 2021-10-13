@@ -14,7 +14,10 @@ class UserController extends Controller
     public function index()
     {
         // halaman utama
-        return 'Halaman index';
+        // url/user
+        $depan = 'Aziz';
+        $belakang = 'Tubagus';
+        return view('user.index', compact('depan','belakang'));
     }
 
     /**
@@ -25,7 +28,10 @@ class UserController extends Controller
     public function create()
     {
         // halaman menambah data
-        return 'Halaman create';
+        // url/user/create
+            $depan = 'Aziz';
+            $belakang = 'Hirzi';
+            return view('user.create', compact('depan','belakang'));
     }
 
     /**
@@ -37,6 +43,8 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // proses menambahkan data
+        // url/user
+        // post
     }
 
     /**
@@ -48,6 +56,7 @@ class UserController extends Controller
     public function show($id)
     {
         // halaman menampilkan data by $id
+        // url/user/{$id}
         return 'Halaman show' .$id;
     }
 
@@ -60,6 +69,7 @@ class UserController extends Controller
     public function edit($id)
     {
         // halaman edit data by $id
+        // url/user/{$id}/edit
         return 'Halaman edit' .$id;
     }
 
@@ -73,6 +83,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         // proses edit data by $id
+        // url/user/{$id}
     }
 
     /**
@@ -84,5 +95,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         // proses hapus data by $id
+        // url/user/{$id}
     }
 }
