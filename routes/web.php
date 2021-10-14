@@ -3,6 +3,7 @@
 use App\Http\Controllers\DataSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookController;
 
 // Route::get('1', function () {
 //     return 'satu';
@@ -68,6 +69,9 @@ use App\Http\Controllers\UserController;
 // }) -> name('index');
 
 Route::resource('user', UserController::class);
+
+
+Route::resource('book', BookController::class);
 
 // show
 // Route::resource('user/{$id}', UserController::class, 'show');

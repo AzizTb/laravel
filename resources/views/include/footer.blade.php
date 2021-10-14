@@ -1,3 +1,7 @@
-<footer class="py-5 bg-dark">
-    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+<footer class="main-footer">
+    <strong>Copyright &copy; {{date('Y')}} <a href="https://adminlte.io">Aziz Tubagus Taufik Hirzi</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.1.0
+    </div>
 </footer>
