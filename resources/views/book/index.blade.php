@@ -11,4 +11,6 @@
         Jumlah Halaman Buku : {{ $data->jumlah_halaman }} <br>
         Translate Judul : {{ $data->translate_judul_buku ?? 'Tidak Ada TL' }} <br>
         <hr>
-    @
+    @endforeach
+
+@endsection
